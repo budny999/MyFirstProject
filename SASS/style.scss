@@ -16,7 +16,7 @@ body {
 	background-color: $bg-color;
 	font-family: 'Montserrat, sans-serif';
 }
-.blue-text {
+.red-text {
 	color: $main-color;
 }
 .shadow-bg {
@@ -33,6 +33,9 @@ h2 {
 	height: 4px;
 	background-color: $main-color;
 }
+.nav-link:hover {
+	color : $main-color;
+}
 nav {
 	height: 72px;
 	position: absolute;
@@ -43,6 +46,8 @@ nav {
 	a,
 	i {
 		color: $white;
+		font-size: 1.5rem;
+		font-weight: 900;
 	}
 
 	.nav-link {
@@ -51,11 +56,12 @@ nav {
 	a:hover {
 		color: $main-color;
 	}
-	.fa-bars {
-		padding: 10px;
-		color: $white;
+	.fa-solid {
+		padding-right: 10px;	
+		
 	}
-	.fa-headset {
+	.fa-car {
+		font-size: 2rem;
 		padding-right: 10px;
 	}
 	.navbar-brand {
@@ -65,12 +71,16 @@ nav {
 		color: $main-color;
 	}
 }
-.fa-headset {
+.fa-car {
 	color: $white;
 }
-.navbar-brand {
+.navbar-brand span{
+	font-size: 1.5rem;
+}
+.navbar-brand {	
 	color: $white;
 }
+
 .navbar-brand:hover {
 	color: $main-color;
 }
@@ -83,7 +93,7 @@ header {
 	}
 	.main-img {
 		position: relative;
-		background-image: url('/Img/game-console-g35ac9680c_640.jpg');
+		background-image: url('/img/MAJS_autolaweta.jpg');
 		background-position: center;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
@@ -105,7 +115,7 @@ header {
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			background-color: rgba(0, 0, 0, 0.3);
+			background-color: rgba(0, 0, 0, 0.6);
 			z-index: 5;
 		}
 		.btn-outline-light {
@@ -122,59 +132,30 @@ header {
 		}
 	}
 }
-.technology {
-	color: $white;
-	position: relative;
-	background-image: url('/Img/technology-_640.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	z-index: 0;
 
-	.technology-shadow {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.5);
-		z-index: -1;
-		top: 0;
-	}
-}
-
-.aboutus {
+.aboutme {
 	i {
 		margin-top: 20px;
 		font-size: 30px;
 	}
-	.aboutus-card-title {
+	.aboutme-card-title {
 		text-transform: uppercase;
 		font-size: 26px;
 	}
-	.aboutus-card-text {
+	.aboutme-card-text {
 		font-size: 20px;
 	}
 	
-	.about-us-hover:hover {
-		color: $main-color;
+	.about-me-hover:hover {
+		color: red;
 		cursor: pointer;
 	}
 }
-.technology-item {
-	margin: 10px 0;
-	i {
-		font-size: 36px;
-	}
-	p {
-		font-size: 20px;
-	}
-	.aboutus-technology-title {
-		font-size: 24px;
-	}
-}
-.portfolio {
+
+.realizacje {
 	position: relative;
 	.carousel-item {
-		height: 50vh;
+		height: 80vh;
 	}
 	.carousel-caption {
 		position: absolute;
@@ -212,7 +193,7 @@ header {
 		margin: 20px 0px;
 		padding: 30px 50px;
 		background-color: $white;
-		box-shadow: 10px 11px 10px -6px rgba(66, 68, 90, 1);
+		box-shadow: 10px 11px 10px -6px rgb(90, 66, 66);
 		transition: transform 0.3s;
 
 		span {
@@ -245,22 +226,30 @@ header {
 			color: $white;
 			letter-spacing: 1px;
 		}
+		a{
+			text-decoration: none;
+			color: $white;
+		}
+		a:hover{
+			font-size: 1.8rem;
+			transition: 0.3s;
+		}
 	}
 	.option:hover {
 		transform: scale(1.07);
 	}
 }
 
-.team {
+.tools {
 	position: relative;
-	background-image: url(/Img/team/chairs-2181980_1920.jpg);
+	background-image: url('/img/laweta.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
 	z-index: 0;
 
-	.team-shadow {
+	.tools-shadow {
 		position: absolute;
 		background-color: rgba(0, 0, 0, 0.7);
 		top: 0;
@@ -316,7 +305,7 @@ header {
 }
 .contact {
 	position: relative;
-	background-image: url(/Img/architecture-1868667_640.jpg);
+	background-image: url('/img/architecture-1868667_640.jpg');
 	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -346,6 +335,10 @@ header {
 		p {
 			font-size: 20px;
 		}
+		a{
+		text-decoration: none;
+		color: $main-color;
+		}
 	}
 	.social-media {
 		i {
@@ -357,6 +350,7 @@ header {
 			color: $main-color;
 		}
 	}
+	
 }
 
 @media (min-width: 375px) {
@@ -372,26 +366,23 @@ header {
 			font-size: 36px;
 		}
 		.main-img {
-			background-image: url('/Img/game-console-g020c704ef_1920.jpg');
-		}
-	}
+			
+			background-image: url('/img/MAJS_autolaweta.jpg');
+			}
+}
 }
 @media (min-width: 992px) {
 	nav {
 		height: 82px;
 	}
-	.technology {
-		color: $white;
-		position: relative;
-		background-image: url('/Img/technology-1920.jpg');
-	}
+	
 	.prices {
 		.price-info {
 			font-size: 20px;
 		}
 	}
 	.contact {
-		background-image: url(/Img/architecture-1868667_1920.jpg);
+		background-image: url('./img/architecture-1868667_1920.jpg');
 	}
 }
 
